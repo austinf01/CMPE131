@@ -1,16 +1,20 @@
 def calculator(num1,num2,oper):
-     if oper == '+':
-             return num1 + num2
-     if oper == '-':
-             return num1 - num2
-     if oper =='*':
-             return num1 * num2
-     if oper == '/':
-             return num1 / num2
-     if oper == '//':
-             return num1 // num2
-     if oper == '**':
-             return num1 ** num2
+	if oper == '+':
+		return num1 + num2
+	if oper == '-': 
+		return num1 - num2
+	if oper == '*':
+		return num1 * num2
+	if oper == '/':
+		if num2 == 0:		#return null for case: divide by 0
+			return null
+		return num1 / num2
+	if oper == '//':
+		if num2 == 0:
+			return null
+		return num1 // num2
+	if oper == '**':
+		return num1 ** num2
 
 def parse_input():
         equation  = input("Enter equation: ")     #user input, ex. "10 + 5"
