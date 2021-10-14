@@ -6,12 +6,12 @@ def calculator(num1,num2,oper):
 	if oper == '*':
 		return num1 * num2
 	if oper == '/':
-		if num2 == 0:		#return null for case: divide by 0
-			return null
+		if num2 == 0:			#return undefined for case: divide by 0
+			return 'undefined'
 		return num1 / num2
 	if oper == '//':
-		if num2 == 0:
-			return null
+		if num2 == 0:			#return undefined for case: divide by 0
+			return 'undefined'
 		return num1 // num2
 	if oper == '**':
 		return num1 ** num2
