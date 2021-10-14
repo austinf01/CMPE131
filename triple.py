@@ -1,9 +1,12 @@
 def tripler(func):
-	func()
-	func()
-	func()
+	def wrapper():
+		func()
+		func()
+		func()
+	return wrapper
 
 @tripler
 def tripled():
-	print("triple")
+	print('triple')
 
+tripled()
