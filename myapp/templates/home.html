@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <a href = 'https://www.google.com'> goooogle </a>
+</div>
+	
+    <ul>
+        {% for city in cities  %}
+            <li> {{ city }} </li>
+        {% endfor %}
+    </ul>
+
+    <form action ="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.city_name.label }} <br>
+        {{ form.city_name(size=32) }}
+    </p>
+    <p>
+        {{ form.city_rank.label }} <br>
+        {{ form.city_rank(size=32) }}
+    </p>
+    <p>
+        {{ form.is_visited.label }}
+        {{ form.is_visited() }}
+    </p>
+    <p>
+        {{ form.submit.label }}
+        {{ form.submit() }}
+    </p>
+{% endblock %}
