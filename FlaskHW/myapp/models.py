@@ -2,7 +2,7 @@ from myapp import db
 
 class City(db.Model):
     city_name = db.Column(db.String(64), index=True, primary_key=True)
-    city_rank = db.Column(db.Integer, unique=False,index=True)
+    city_rank = db.Column(db.Integer, unique=True,index=True)
     is_visited = db.Column(db.Boolean)
     
     def __repr__(self): 
